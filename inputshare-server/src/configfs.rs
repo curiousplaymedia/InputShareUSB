@@ -129,8 +129,8 @@ fn enable_hid() -> Result<()> {
     fs::create_dir("g1")?;
     env::set_current_dir("g1")?;
 
-    fs::write("idVendor", "0x1d6b")?;
-    fs::write("idProduct", "0x0104")?;
+    fs::write("idVendor", "0x046D")?;
+    fs::write("idProduct", "0xC52B")?;
     fs::write("bcdDevice", "0x0100")?;
     fs::write("bcdUSB", "0x0200")?;
 
@@ -140,8 +140,8 @@ fn enable_hid() -> Result<()> {
 
     fs::create_dir_all("strings/0x409")?;
     fs::write("strings/0x409/serialnumber", "fedcba9876543210")?;
-    fs::write("strings/0x409/manufacturer", "sidit77")?;
-    fs::write("strings/0x409/product", "InputShareUSB")?;
+    fs::write("strings/0x409/manufacturer", "Logitech")?;
+    fs::write("strings/0x409/product", "Logitech, Inc. Unifying Receiver")?;
 
     fs::create_dir_all("configs/c.1/strings/0x409")?;
     fs::write("configs/c.1/strings/0x409/configuration", "Config 1: Keyboard")?;
